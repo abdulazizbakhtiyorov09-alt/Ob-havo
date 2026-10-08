@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Pro Ob-Havo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Qidiruv paneli -->
+        <div class="search-box">
+            <i class="fa-solid fa-location-dot search-icon"></i>
+            <input type="text" id="city-input" placeholder="Shahar izlash..." autocomplete="off">
+            <button id="search-btn" aria-label="Qidirish">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <div class="error-badge" id="error-msg">
+            <i class="fa-solid fa-circle-exclamation"></i> Shahar topilmadi!
+        </div>
+
+        <!-- Asosiy Ob-Havo Paneli -->
+        <div class="weather-content" id="weather-info">
+            
+            <div class="header-info">
+                <div>
+                    <h1 class="city" id="city-name">Toshkent</h1>
+                    <p class="current-date" id="current-date">Peshshanba, 8 Oktyabr, 2026</p>
+                </div>
+            </div>
+
+            <!-- Markaziy Temp -->
+            <div class="hero-weather">
+                <img src="https://openweathermap.org/img/wn/10d@4x.png" class="weather-icon" id="weather-icon" alt="Ob-havo">
+                <div class="hero-temp-group">
+                    <span class="temp" id="temp">0</span><span class="deg">°C</span>
+                    <p class="description" id="weather-desc">Ochiq havo</p>
+                </div>
+            </div>
+
+            <!-- Ko'rsatkichlar Glid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="icon-wrapper"><i class="fa-solid fa-droplet"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-label">Namlik</span>
+                        <span class="stat-value" id="humidity">0%</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="icon-wrapper"><i class="fa-solid fa-wind"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-label">Shamol</span>
+                        <span class="stat-value" id="wind-speed">0 m/s</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="icon-wrapper"><i class="fa-solid fa-gauge-high"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-label">Bosim</span>
+                        <span class="stat-value" id="pressure">0 hPa</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="icon-wrapper"><i class="fa-solid fa-temperature-half"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-label">Hissiy</span>
+                        <span class="stat-value" id="feels-like">0°C</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Haftalik prognoz bo'limi -->
+            <div class="forecast-section">
+                <h3 class="section-title"><i class="fa-regular fa-calendar-days"></i> Kunlik Prognoz</h3>
+                <div class="forecast-list" id="forecast-list">
+                    <!-- JS orqali kunlar qo'shiladi -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
